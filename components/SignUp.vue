@@ -5,7 +5,7 @@
         <v-card-title>新規登録</v-card-title>
         <v-text-field label="名前" v-model="user.name"></v-text-field>
         <v-text-field label="メールアドレス" v-model="email"></v-text-field>
-        <v-text-field :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'" label="パスワード" :type="show ? 'text' : 'password'" @click:append="show = !show" v-model="pass" hint="6文字以上" :rules="rules.min"></v-text-field>
+        <v-text-field :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'" label="パスワード" :type="show ? 'text' : 'password'" @click:append="show = !show" v-model="pass" hint="6文字以上"></v-text-field>
         <v-row class="justify-space-between mt-4 mx-5">
           <v-btn elevation="0" @login="logIn">ログインする</v-btn>
         <v-btn color="primary" @click="signUp" elevation="0">新規保存</v-btn>
@@ -28,9 +28,7 @@ export default {
       },
       email: '',
       pass: '',
-      rules: {
-        min: v => v.length >= 6 || '6文字以上入力してください'
-      }
+      
     }
   },
   methods: {
