@@ -1,0 +1,22 @@
+div.wrap {
+  margin: 100px auto 0;
+  width: 1200px;
+}
+
+ul, li {
+  padding: 0;
+  list-style: none;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+span.address {
+  color: #adadad;
+}
+
+div.on-click {
+  cursor: pointer;
+}
+
