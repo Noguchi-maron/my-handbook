@@ -10,12 +10,12 @@ import 'firebase/firestore'
 if(!Firebase.apps.length){
   Firebase.initializeApp({
     apiKey: "AIzaSyCtO4Xs4gUPqfVSb_LFISTHKbhPcHJng7Y",
-  authDomain: "my-handbook-328611.firebaseapp.com",
-  projectId: "my-handbook-328611",
-  storageBucket: "my-handbook-328611.appspot.com",
-  messagingSenderId: "83790573202",
-  appId: "1:83790573202:web:f9055db1c652d40249004b",
-  measurementId: "G-W7NE85MY1G"
+    authDomain: "my-handbook-328611.firebaseapp.com",
+    projectId: "my-handbook-328611",
+    storageBucket: "my-handbook-328611.appspot.com",
+    messagingSenderId: "83790573202",
+    appId: "1:83790573202:web:f9055db1c652d40249004b",
+    measurementId: "G-W7NE85MY1G"
   })
   
 };

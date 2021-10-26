@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app v-cloak>
     <v-app-bar absolute class="px-12" flat>
       <v-toolbar-title>My HandBook</v-toolbar-title>
       <v-spacer></v-spacer>

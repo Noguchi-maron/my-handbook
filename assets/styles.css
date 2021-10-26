@@ -20,3 +20,6 @@ div.on-click {
   cursor: pointer;
 }
 
+[v-cloak] {
+  display: none;
+}

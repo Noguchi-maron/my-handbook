@@ -23,7 +23,7 @@
         </v-col>
       </v-row>
       <v-text-field outlined readonly v-model="result.website" label="ウェブサイト"></v-text-field>
-      <v-textarea rows="3" label="メモ" v-model="exp"></v-textarea>
+      <v-textarea rows="3" label="メモ" v-model="result.exp"></v-textarea>
       <v-row dense class="justify-end mt-4 mr-5">
       <v-btn color="primary" @click="submit">保存</v-btn>
       </v-row>
@@ -36,6 +36,7 @@
 <script>
 
 import { debounce } from 'lodash'
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
@@ -43,14 +44,13 @@ export default {
       items: [],
       result: {},
       readOnly: false,
-      exp: '',
     }
   },
   watch: {
       
   },
   computed: {
-    
+    ...mapState(['user', 'destsLength'])
   },
   methods: {
     getResult: debounce(function (v) {
@@ -58,20 +58,29 @@ export default {
       this.result = {
         name: v.name,
         id: '',
+        order: 0,
+        position: v.geometry.location,
         formatted_address: v.formatted_address,
         formatted_phone_number: v.formatted_phone_number,
         website : v.website,
-        exp : '営業時間：　' + v.opening_hours.weekday_text,
+        exp : '',
         created: '',
+        position: v.geometry.viewport
       }
+      if (v.opening_hours) {
+        this.result.exp = '営業時間：　' + v.opening_hours.weekday_text
+      }
+      console.log(this.result)
     }, 1000),
     async submit () {
       const userId = this.$store.state.user.id
       const collection = this.$fb.firestore().collection('users').doc(userId).collection('books').doc(this.$route.params.bookId).collection('dests')
       const newDoc = collection.doc().id
       this.result.id = newDoc
+      this.result.order = this.destsLength + 2
       this.result.created = this.$fb.firestore.FieldValue.serverTimestamp()
-      await collection.doc().push({ ...this.result })
+      console.log(this.result)
+      await collection.doc(newDoc).set({ ...this.result })
       this.$router.push(`/mypage/${this.$route.params.bookId}`)
     }
   },

@@ -26,7 +26,8 @@ export default {
   plugins: [
     { src: '~/plugins/vue2-google-maps.js' },
     { src: '~/plugins/lodash.js' },
-    { src: '~/plugins/firebase.js', ssr: false }
+    { src: '~/plugins/firebase.js', ssr: false },
+    { src: '~/plugins/vue-draggable.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,7 +46,7 @@ export default {
     proxy: true,
   },
   proxy: {
-    '/api/': { target: 'http://localhost:3000', pathRewrite: {'^/api/': ''} }
+    '/api/': { target: 'https://example.com', pathRewrite: {'^/api/': ''} }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

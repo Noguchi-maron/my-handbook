@@ -2,6 +2,8 @@ export const state =  () => {
   return {
     loginStatus: false,
     user: {},
+    destsLength: 0,
+  
   }
 }
 
@@ -11,10 +13,17 @@ export const mutations = {
   },
   getUser (state, user) {
     state.user = user
+  },
+  logout (state) {
+    state.user = {}
+  },
+  getDestsLength (state, l) {
+    state.destsLength = l
   }
 }
 
 export const actions = {
+  //ログイン中かを判断
   async loadLogin ({ dispatch, commit }) {
     await this.$fb.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -26,6 +35,7 @@ export const actions = {
       }
     })
   },
+  //user情報を取得
   async getUser ({ commit }, uid) {
     const userData = this.$fb.firestore().collection('users').doc(uid)
     await userData.get().then(d => {
@@ -35,5 +45,18 @@ export const actions = {
         console.log('Error')
       }
     })
+  },
+  getDestsLength ({commit}, l) {
+    commit('getDestsLength', l)
+  },
+
+}
+
+export const getters = {
+  usersCollection () {
+    return this.$fb.firestore().collection('users')
+  },
+  booksCollection (state) {
+    return $fb.firestore().collection('users').doc(state.user.id).collection('books')
   }
 }
