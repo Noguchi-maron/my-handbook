@@ -20,6 +20,8 @@ if(!Firebase.apps.length){
   
 };
 
+export const auth = Firebase.auth
+
 export default( context, inject ) => {
   const $fb = {
     app: Firebase.app,

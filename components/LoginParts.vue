@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn @click="login">ログイン</v-btn>
+    <v-btn @click="login" block text class="py-8">ログイン</v-btn>
   </div>
 </template>
 

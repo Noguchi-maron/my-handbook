@@ -1,17 +1,16 @@
 <template>
   <div>
-    <v-btn @click="logout" elevation="0">ログアウト</v-btn>
+    <v-btn @click="logout" elevation="0" block text class="py-8">ログアウト</v-btn>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-    async logout () {
-      await this.$fb.auth().signOut().then(() => {
-        this.$store.dispatch('loadLogin')
-        this.$router.push('/')
-      })
+    //ログアウト処理
+    logout () {
+      this.$store.dispatch('logout')
+      location.reload()
     }
   }
 }

@@ -21,12 +21,16 @@ export default {
   css: [
     '@/assets/styles.css'
   ],
+  router: {
+    middleware: 'authenticated',
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vue2-google-maps.js' },
     { src: '~/plugins/lodash.js' },
-    { src: '~/plugins/firebase.js', ssr: false },
+    { src: '~/plugins/firebase.js'},
+    { src: '~/plugins/firebase.auth.js'},
     { src: '~/plugins/vue-draggable.js' }
   ],
 
@@ -35,24 +39,20 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
   ],
-  axios: {
-    proxy: true,
-  },
-  proxy: {
-    '/api/': { target: 'https://example.com', pathRewrite: {'^/api/': ''} }
-  },
-
+  
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, ctx) {},
     vender: ['vue2-google-maps'],
     transpile: [/^vue2-google-maps($|\/)/],
+  },
+  generate: {
+    dir: 'public'
   }
 }
