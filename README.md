@@ -5,6 +5,10 @@
 
 目的地を登録して、地図の閲覧や、施設情報の入手が手軽にできます。
 
+| タイムライン | しおり |
+| :---: | :---: |
+| ![timeline](https://lh3.googleusercontent.com/s24IdelziNiZuWa1dhS28HjG2O7dABoVmdQiC-5wSYpaifYd0rn0eokQaKIGbqnvvkYIWw=s47) | ![handbook](https://lh3.googleusercontent.com/Ak9qerGPNI5IZs_jTJ4HZzRm9Noxpah3mOAeg9gO15teCaT4Qt8GxwOcrkx63fHiH1Vo7w=s47) |
+
 ## Demo
 https://my-handbook-328611.web.app
 
