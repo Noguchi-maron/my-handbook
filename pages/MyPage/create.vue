@@ -8,7 +8,7 @@
           <v-col cols="11" md="8" class="mx-auto">
         <v-card-title>新しいしおり</v-card-title>
         <v-text-field label="しおりの名前" counter maxlength="25" v-model="form.title"></v-text-field>
-        <v-file-input label="File input" prepend-icon="mdi-camera" v-model="image" accept=".png, .jpeg, .jpg"></v-file-input>
+        <v-file-input label="File input"  prepend-icon="mdi-camera"  accept=".png, .jpeg, .jpg" @change="inputPhoto"></v-file-input>
         <v-row dense>
           <v-col cols="7">
             <v-select multiple v-model="form.selectPref" :items="prefectures" label="エリア選択"></v-select>
@@ -153,13 +153,16 @@ export default {
     //ウィンドウサイズの変更を検知
     resizeWindow () {
       this.windowWidth = window.innerWidth
+    },
+    inputPhoto (image) {
+      const reader = new FileReader()
+      reader.readAsDataURL(image)
+      reader.onload = (e) => {
+        this.image = e.target.result
+      }
     }
   },
   computed: {
-    url(){
-      if(this.image===null){return ''}
-      else{return URL.createObjectURL(this.image);}
-    },
     canSubmit () {
       if (!this.form.title || this.form.title.length > 25 || this.form.exp.length > 200 || !this.form.firstDate || this.form.selectPref.length === 0) {
         return true

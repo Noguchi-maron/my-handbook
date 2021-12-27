@@ -3,7 +3,7 @@
     <v-col cols="11" md="8">
       <CommentForm :commentLists="comments" v-if="commentShow" :bookData="book" @commentClose="commentShow = false" @submitComment="commentShow = false"></CommentForm>
       <h2 class="mb-4">マイページ</h2>
-        <v-btn elevation="0" color="primary" @click="$router.push('/Mypage/create')">新規作成</v-btn>
+        <v-btn elevation="0" color="primary" @click="toCreate">新規作成</v-btn>
         <v-btn elevation="0" color="error" text @click="isEdit = !isEdit" class="ml-5" v-show="!isEdit">編集</v-btn>
         <v-btn elevation="0" color="error" text @click="isEdit = !isEdit" class="ml-5" v-show="isEdit">完了</v-btn>
         <div class="py-5">
@@ -96,6 +96,9 @@ export default {
       const date = this.$fb.firestore.FieldValue.serverTimestamp()
       this.bookCollection.doc(id).update({update: date})
       this.$router.push(`/mypage/${id}`)
+    },
+    toCreate () {
+      this.$router.push('/mypage/create')
     },
     //しおりを削除する
     async deleteBook (id, i) {

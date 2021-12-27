@@ -17,7 +17,7 @@
                   label="File input"
                   prepend-icon="mdi-camera"
                   accept=".png, .jpeg, .jpg"
-                  v-model="image"
+                  @change="inputPhoto"
                 ></v-file-input>
                 <v-row>
                   <v-col cols="7">
@@ -205,14 +205,6 @@ export default {
     userId() {
       return this.$store.getters.user.id;
     },
-    //urlを設定
-    url() {
-      if (this.image === null) {
-        return "";
-      } else {
-        return URL.createObjectURL(this.image);
-      }
-    },
     //送信可能かを検証するboolean
     canSubmit() {
       if (
@@ -261,13 +253,20 @@ export default {
 
       await this.book.update({
         title: this.form.title,
-        photo: this.url,
+        photo: this.image,
         firstDate: this.form.firstDate,
         lastDate: this.form.lastDate,
         exp: this.form.exp,
         update: this.form.update
       });
       this.$router.push(`/mypage/${this.$route.params.bookId}`);
+    },
+    inputPhoto (image) {
+      const reader = new FileReader()
+      reader.readAsDataURL(image)
+      reader.onload = (e) => {
+        this.image = e.target.result
+      }
     }
   }
 };

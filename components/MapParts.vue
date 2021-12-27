@@ -41,8 +41,8 @@ export default {
   },
   data () {
     return {
-      maplocation: { lat: 0, lng: 0 },
-      zoom: 14,
+      maplocation: { lat: 40, lng: 140 },
+      zoom: 4,
       styleMap: {
         width: '100%',
         height: '500px'
@@ -76,7 +76,7 @@ export default {
     },
     setZoom () {
       this.$gmapApiPromiseLazy().then(() => {
-        if (this.dests.length > 2) {
+        if (this.dests.length >= 2) {
           let bounds = new google.maps.LatLngBounds()
           for (let d of this.dests) {
             bounds.extend(d.position)

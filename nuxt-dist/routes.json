@@ -1,0 +1,128 @@
+[
+  {
+    "name": "bookmark",
+    "path": "/bookmark",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\bookmark\\\\index.vue",
+    "chunkName": "pages/bookmark/index",
+    "_name": "_204c197b"
+  },
+  {
+    "name": "emailConfirm",
+    "path": "/emailConfirm",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\emailConfirm.vue",
+    "chunkName": "pages/emailConfirm",
+    "_name": "_01dbcbf5"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_0308b070"
+  },
+  {
+    "name": "MyPage",
+    "path": "/MyPage",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\index.vue",
+    "chunkName": "pages/MyPage/index",
+    "_name": "_2ed3ccd6"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\profile\\\\index.vue",
+    "chunkName": "pages/profile/index",
+    "_name": "_67cfc73a"
+  },
+  {
+    "name": "setting",
+    "path": "/setting",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\setting.vue",
+    "chunkName": "pages/setting",
+    "_name": "_377d856f"
+  },
+  {
+    "name": "signUp",
+    "path": "/signUp",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\signUp.vue",
+    "chunkName": "pages/signUp",
+    "_name": "_328fab2e"
+  },
+  {
+    "name": "timeLine",
+    "path": "/timeLine",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\timeLine\\\\index.vue",
+    "chunkName": "pages/timeLine/index",
+    "_name": "_bce74520"
+  },
+  {
+    "name": "MyPage-create",
+    "path": "/MyPage/create",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\create.vue",
+    "chunkName": "pages/MyPage/create",
+    "_name": "_594bceb0"
+  },
+  {
+    "name": "bookmark-authorId",
+    "path": "/bookmark/:authorId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\bookmark\\\\_authorId\\\\index.vue",
+    "chunkName": "pages/bookmark/_authorId/index",
+    "_name": "_d8a8b698"
+  },
+  {
+    "name": "MyPage-bookId",
+    "path": "/MyPage/:bookId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\_bookId\\\\index.vue",
+    "chunkName": "pages/MyPage/_bookId/index",
+    "_name": "_1c373b1b"
+  },
+  {
+    "name": "timeLine-authorId",
+    "path": "/timeLine/:authorId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\timeLine\\\\_authorId\\\\index.vue",
+    "chunkName": "pages/timeLine/_authorId/index",
+    "_name": "_b49274c2"
+  },
+  {
+    "name": "MyPage-bookId-edit",
+    "path": "/MyPage/:bookId/edit",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\_bookId\\\\edit.vue",
+    "chunkName": "pages/MyPage/_bookId/edit",
+    "_name": "_b818ce5e"
+  },
+  {
+    "name": "MyPage-bookId-search",
+    "path": "/MyPage/:bookId/search",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\_bookId\\\\search\\\\index.vue",
+    "chunkName": "pages/MyPage/_bookId/search/index",
+    "_name": "_f5c4401a"
+  },
+  {
+    "name": "bookmark-authorId-bookId",
+    "path": "/bookmark/:authorId/:bookId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\bookmark\\\\_authorId\\\\_bookId\\\\index.vue",
+    "chunkName": "pages/bookmark/_authorId/_bookId/index",
+    "_name": "_821d4606"
+  },
+  {
+    "name": "MyPage-bookId-destId",
+    "path": "/MyPage/:bookId/:destId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\MyPage\\\\_bookId\\\\_destId\\\\index.vue",
+    "chunkName": "pages/MyPage/_bookId/_destId/index",
+    "_name": "_1e75db5d"
+  },
+  {
+    "name": "timeLine-authorId-bookId",
+    "path": "/timeLine/:authorId/:bookId",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\timeLine\\\\_authorId\\\\_bookId\\\\index.vue",
+    "chunkName": "pages/timeLine/_authorId/_bookId/index",
+    "_name": "_36d51472"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\agisy\\\\Dropbox\\\\my-handbook\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_34d404b1"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "BookParts": {
+    "description": "Auto imported from components/BookParts.vue"
+  },
+  "BooksPage": {
+    "description": "Auto imported from components/BooksPage.vue"
+  },
+  "CommentForm": {
+    "description": "Auto imported from components/CommentForm.vue"
+  },
+  "LoggedIn": {
+    "description": "Auto imported from components/LoggedIn.vue"
+  },
+  "LoginGoogle": {
+    "description": "Auto imported from components/LoginGoogle.vue"
+  },
+  "LoginParts": {
+    "description": "Auto imported from components/LoginParts.vue"
+  },
+  "LogoutParts": {
+    "description": "Auto imported from components/LogoutParts.vue"
+  },
+  "MapParts": {
+    "description": "Auto imported from components/MapParts.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "ProfilePage": {
+    "description": "Auto imported from components/ProfilePage.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  }
+}

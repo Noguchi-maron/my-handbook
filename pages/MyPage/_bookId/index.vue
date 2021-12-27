@@ -1,5 +1,5 @@
 <template>
-  <BooksPage :authorId="''" :bookId="bookId"></BooksPage>
+  <BooksPage :authorId="''" :bookId="bookId" :pageName="'mypage'"></BooksPage>
 </template>
 
 <script>
