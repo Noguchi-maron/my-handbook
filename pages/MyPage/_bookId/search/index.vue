@@ -12,8 +12,10 @@
       </v-form>
 
       <v-card flat>
-        <v-text-field class="mb-5"
-          outlined hide-details="false"
+        <v-text-field
+          class="mb-5"
+          outlined
+          hide-details="false"
           readonly
           v-model="result.name"
           label="施設・場所の名前"
@@ -21,7 +23,9 @@
         <v-row no-gutters justify="space-between">
           <v-col cols="8" md="4">
             <v-text-field
-              outlined hide-details="false" class="mb-5"
+              outlined
+              hide-details="false"
+              class="mb-5"
               readonly
               v-model="result.postCode"
               label="郵便番号"
@@ -30,9 +34,11 @@
           <v-col cols="12" md="7">
             <v-text-field
               outlined
-              readonly hide-details="false"
+              readonly
+              hide-details="false"
               v-model="result.address"
-              label="住所" class="mb-5"
+              label="住所"
+              class="mb-5"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -40,15 +46,19 @@
           <v-col cols="6">
             <v-text-field
               outlined
-              readonly hide-details="false"
+              readonly
+              hide-details="false"
               v-model="result.formatted_phone_number"
-              label="電話番号" class="mb-5"
+              label="電話番号"
+              class="mb-5"
             ></v-text-field>
           </v-col>
         </v-row>
         <v-text-field
-          outlined class="mb-5"
-          readonly hide-details="false"
+          outlined
+          class="mb-5"
+          readonly
+          hide-details="false"
           v-model="result.website"
           label="ウェブサイト"
         ></v-text-field>
@@ -56,7 +66,8 @@
           rows="3"
           label="営業時間"
           v-model="result.opening_hours"
-          auto-grow readonly
+          auto-grow
+          readonly
         ></v-textarea>
         <v-textarea
           rows="3"

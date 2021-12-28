@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      user: {},
+      user: { name: "", exp: "" },
       userCollection: null
     };
   },
@@ -37,6 +37,7 @@ export default {
     this.getUser();
   },
   methods: {
+    //ユーザー情報の取得
     async getUser() {
       this.userCollection = this.$fb
         .firestore()
@@ -45,8 +46,10 @@ export default {
       const user = await this.userCollection.get();
       this.user = user.data();
     },
+    //ユーザー情報の保存・送信
     async setUser() {
       this.userCollection.update({ name: this.user.name, exp: this.user.exp });
+      console.log(this.user.exp);
       location.reload();
     }
   }

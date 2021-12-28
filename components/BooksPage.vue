@@ -109,7 +109,7 @@ export default {
   props: {
     authorId: String,
     bookId: String,
-    pageName: String,
+    pageName: String
   },
   data() {
     return {
@@ -266,9 +266,13 @@ export default {
     //目的地の情報を編集
     editDestsBtn(id) {
       if (!this.authorId) {
-        this.$router.push(`/mypage/${this.bookId}/${id}?date=${this.selectDate}`);
+        this.$router.push(
+          `/mypage/${this.bookId}/${id}?date=${this.selectDate}`
+        );
       } else {
-        this.$router.push(`/${this.pageName}/${this.authorId}/${this.bookId}/${id}?date=${this.selectDate}`);
+        this.$router.push(
+          `/${this.pageName}/${this.authorId}/${this.bookId}/${id}?date=${this.selectDate}`
+        );
       }
     },
     //ウィンドウサイズを検知する処理
@@ -277,7 +281,9 @@ export default {
         const navHeight = 56;
         const titleHeight = 50;
         const chipHeight = 50;
+        //全体の高さの三分の一を求める処理
         this.mapHeight = Math.floor((window.innerHeight - navHeight) / 3);
+        //全体の高さの三分の二からその他要素を引いた高さを求める処理
         this.destHeight = this.mapHeight * 2 - chipHeight - titleHeight - 50;
       } else {
         this.destHeight = 450;

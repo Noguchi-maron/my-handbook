@@ -52,8 +52,7 @@ export default {
         .then(() => {
           this.$router.push("/emailconfirm");
         })
-        .catch(error => {
-        });
+        .catch(error => {});
     },
     //アカウントを削除する処理
     async deleteUser() {

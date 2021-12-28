@@ -103,37 +103,6 @@ export default {
       this.user.id = u.uid;
       const collection = this.$fb.firestore().collection("users");
       await collection.doc(this.user.id).set({ ...this.user });
-    },
-    async googleLogin() {
-      const provider = new this.$fb.auth.GoogleAuthProvider();
-      await this.$fb
-        .auth()
-        .signInWithPopup(provider)
-        .then(result => {
-          this.checkGoogleUser(result.user);
-          this.$router.push("/mypage");
-        })
-        .catch(reject => {
-          this.$router.push("/");
-        });
-    },
-    async checkGoogleUser(user) {
-      const userData = this.$fb
-        .firestore()
-        .collection("users")
-        .doc(user.uid);
-      await userData
-        .get()
-        .then(d => {
-          if (!d.exists) {
-            this.user.name = user.displayName;
-            this.userData(user);
-          } else {
-            this.router.push("/mypage");
-          }
-        })
-        .catch(() => {
-        });
     }
   },
   components: { LoginGoogle }
