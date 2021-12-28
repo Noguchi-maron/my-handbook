@@ -114,10 +114,10 @@ export default {
   methods: {
     //自身のコメントにのみ削除ボタンを表示する処理
     setDeleteBtn() {
-      this.comments.forEach(com => {
-        this.$set(com, "deleteBtn", false);
-        if (com.authorId === this.user.id) {
-          com.deleteBtn = true;
+      this.comments.forEach(comment => {
+        this.$set(comment, "deleteBtn", false);
+        if (comment.authorId === this.user.id) {
+          comment.deleteBtn = true;
         }
       });
     },

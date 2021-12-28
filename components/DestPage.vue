@@ -107,7 +107,7 @@ export default {
   methods: {
     //目的地の情報を取得する処理
     async getDests() {
-      const d = await this.$fb
+      const destData = await this.$fb
         .firestore()
         .collection('users')
         .doc(this.authorId)
@@ -116,7 +116,7 @@ export default {
         .collection('dests')
         .doc(this.destId)
         .get()
-      this.item = d.data();
+      this.item = destData.data();
     },
     //変更内容の送信・保存
     async submit() {
